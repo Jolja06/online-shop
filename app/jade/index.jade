@@ -1,14 +1,22 @@
 doctype html
-html(lang="en")
+html(lang="ru-Ru")
 	head
 		meta(charset="UTF-8")
+		meta(name="viewport" content="width=1150, initial-scale=1")
 		title COOLTECH
 		// bower:css
-		link(href="css/main.css" rel="stylesheet")
 		// endbower
+		link(href="css/main.css" rel="stylesheet")
+
 	body
 		div.wrapper
 			header.header
+				- var socialsHead = ['vk', 'fb', 'twt'];
+				ul.soc
+					each item in socialsHead
+						li.soc__item
+							a(href="#" class="soc__link_#{item}").soc__link
+
 			nav.nav
 			div.breadcrumbs
 			h2.nav-name
@@ -20,6 +28,8 @@ html(lang="en")
 
 
 		footer.footer
+			
+
 
 		// bower:js
 		// endbower

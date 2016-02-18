@@ -1,0 +1,13 @@
+.soc__link{
+	display: block;
+}
+
+$social: vk, fb, twt;
+
+$map : sprite-map("social/*.png", $spacing: 50px);
+
+@each $item in $social {
+	.soc__link_#{$item} {
+		@include sprite($map, $item);
+	}
+}

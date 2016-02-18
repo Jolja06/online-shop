@@ -10,7 +10,7 @@ images_dir = "app/img"
 javascripts_dir = "app/js"
 
 
-output_style = :compact
+output_style = :production
 
 # To enable relative paths to assets via compass helper functions. Uncomment:
 relative_assets = true

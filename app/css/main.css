@@ -1,3 +1,17 @@
-body {
-  background: #bebebe;
-  font-size: 12px; }
+.soc__link {
+  display: block; }
+
+.soc__link_vk {
+  background: url('../img/social-s2349298b41.png') 0 -938px no-repeat;
+  width: 27px;
+  height: 26px; }
+
+.soc__link_fb {
+  background: url('../img/social-s2349298b41.png') 0 -262px no-repeat;
+  width: 26px;
+  height: 26px; }
+
+.soc__link_twt {
+  background: url('../img/social-s2349298b41.png') 0 -600px no-repeat;
+  width: 26px;
+  height: 26px; }
