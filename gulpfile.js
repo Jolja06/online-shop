@@ -39,8 +39,8 @@ gulp.task('watch', function () {
 		paths.src.js,
 		paths.src.css,
 	]).on('change', browserSync.reload);
-	gulp.watch('bower.json', ['wiredep']);
 	gulp.watch(paths.src.jade, ['jade']);
+	gulp.watch('bower.json', ['wiredep']);
 	gulp.watch(paths.src.scss, ['compass']);
 });
 
@@ -60,6 +60,7 @@ gulp.task('jade', function () {
             locals: YOUR_LOCALS,
             pretty: '\t'
         }))
+        .pipe(wiredep())
         .pipe(gulp.dest(paths.dest.app));
 });
 
