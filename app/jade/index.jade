@@ -11,12 +11,17 @@ html(lang="ru-Ru")
 	body
 		div.wrapper
 			header.header
-				- var socialsHead = ['vk', 'fb', 'twt'];
-				ul.soc
-					each item in socialsHead
-						li.soc__item
-							a(href="#" class="soc__link_#{item}").soc__link
-
+				div.header-wrapper
+					div.social
+						-var socials = [{soc:'fb', url:'https://www.facebook.com/', text:'facebook'},{soc:'vk', url:'http://vk.com/', text:'vkontakte'},{soc:'twt', url:'https://twitter.com/', text:'twitter'}];
+						ul.social__list
+							each item in socials
+								li.social__item
+									a(href="#{item.url}" class="social__link_#{item.soc}").social__link
+										|#{item.text}
+					div.address
+						
+					div.contact
 			nav.nav
 			div.breadcrumbs
 			h2.nav-name

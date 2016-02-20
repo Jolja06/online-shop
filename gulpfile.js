@@ -4,7 +4,8 @@ var gulp = require('gulp'),
 	browserSync = require('browser-sync'),
 	jade = require('gulp-jade'),
 	compass = require('gulp-compass'),
-	wiredep = require('wiredep').stream;
+	wiredep = require('wiredep').stream,
+	plumber = require('gulp-plumber');
 
 var paths = {
 	src: {
