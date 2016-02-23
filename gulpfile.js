@@ -5,7 +5,9 @@ var gulp = require('gulp'),
 	jade = require('gulp-jade'),
 	compass = require('gulp-compass'),
 	wiredep = require('wiredep').stream,
-	plumber = require('gulp-plumber');
+	plumber = require('gulp-plumber'),
+	spritesmith = require('gulp.spritesmith');
+
 
 var paths = {
 	src: {
@@ -14,12 +16,14 @@ var paths = {
 		js : 'app/js/**/*.js',
 		css : 'app/css/**/*.css',
 		scss : 'app/sass/**/*.scss',
-		jade : 'app/jade/**/*.jade'
+		jade : 'app/jade/**/*.jade',
+		img : 'app/img/sprites/*.png'
 	},
 	dest: {
 		css : 'app/css',
 		app : 'app/',
-		scss : 'app/sass'
+		scss : 'app/sass',
+		sprite : 'app/img/sprite'
 	}
 };
 
@@ -57,6 +61,7 @@ gulp.task('jade', function () {
     var YOUR_LOCALS = {};
 
     gulp.src(paths.src.jade)
+        .pipe(plumber())
         .pipe(jade({
             locals: YOUR_LOCALS,
             pretty: '\t'
@@ -68,12 +73,24 @@ gulp.task('jade', function () {
 //compass scss
 gulp.task('compass', function() {
   gulp.src(paths.src.scss)
+  	.pipe(plumber())
     .pipe(compass({
       config_file: './config.rb',
       css: paths.dest.css,
       sass: paths.dest.scss
     }))
     .pipe(gulp.dest(paths.dest.css));
+});
+
+//sprite
+gulp.task('sprite', function () {
+  var spriteData = gulp.src(paths.src.img)
+  .pipe(spritesmith({
+    imgName: 'sprite.png',
+    cssName: '_sprite.scss',
+    padding:30
+  }));
+  return spriteData.pipe(gulp.dest(paths.dest.sprite));
 });
 
 gulp.task('default', ['server', 'watch']);

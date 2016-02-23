@@ -1,5 +1,13 @@
+.social{
+	display: inline-block;
+	float: left;
+}
 .social__item{
 	display: inline-block;
+	margin-left: 12px;
+	&:first-child{
+		margin-left: 0;
+	}
 }
 .social__link{
 	display: block;
@@ -7,4 +15,52 @@
 .social__link{
 	overflow: hidden;
 	color: transparent;
+}
+.social__link_fb{
+	@include sprite($fb);
+	&:hover{
+		@include sprite($fb-hover);
+	}
+}
+.social__link_vk{
+	@include sprite($vk);
+	&:hover{
+		@include sprite($vk-hover);
+	}
+}
+.social__link_twt{
+	@include sprite($twt);
+	&:hover{
+		@include sprite($twt-hover);
+	}
+}
+.address{
+	display: inline-block;
+	margin-left: 545px;
+	margin-top: 3px;
+	position: relative;
+}
+.address__icon{
+	position: absolute;
+	top: 3px;
+	left: -20px;
+	display: inline-block;
+	@include sprite($pin);
+	
+}
+.contact{
+	display: inline-block;
+	float: right;
+	font-family: 'OpenSans-Semibold';
+	font-size: 18px;
+	margin: -1px 3px 0 0;
+	position: relative;
+}
+.contact__icon{
+	display: inline-block;
+	@include sprite($telephone);
+	margin-right: 10px;
+	position: absolute;
+	top: 6px;
+	left: -20px;
 }
