@@ -11,22 +11,42 @@ html(lang="ru-Ru")
 	body
 		div.wrapper
 			header.header
-				div.header-wrapper
-					div.social
-						-var socials = [{soc:'fb', url:'https://www.facebook.com/', text:'facebook'},{soc:'vk', url:'http://vk.com/', text:'vkontakte'},{soc:'twt', url:'https://twitter.com/', text:'twitter'}];
-						ul.social__list
-							each item in socials
-								li.social__item
-									a(href="#{item.url}" class="social__link_#{item.soc}").social__link
-										|#{item.text}
-					div.address
-						i.address__icon
-						span.address__name.
-							ул. Маяковская 6, офис 17
-					div.contact
-						i.contact__icon
-						span.contact__phone.
-							+7 (921) 123-12-13
+				div.header-contact
+					div.header-wrapper
+						div.social
+							-var socials = [{soc:'fb', url:'https://www.facebook.com/', text:'facebook'},{soc:'vk', url:'http://vk.com/', text:'vkontakte'},{soc:'twt', url:'https://twitter.com/', text:'twitter'}];
+							ul.social__list
+								each item in socials
+									li.social__item
+										a(href="#{item.url}" class="social__link_#{item.soc}").social__link
+											|#{item.text}
+						div.address
+							i.address__icon
+							span.address__name.
+								ул. Маяковская 6, офис 17
+						div.contact
+							i.contact__icon
+							span.contact__phone.
+								+7 (921) 123-12-13
+				div.header-search
+					div.header-wrapper
+						div.logo
+							a(href="/").logo__link
+								img(src="img/logo/logo.png" alt="cooltech").logo__img
+								h1.logo__header
+									|COOLTECH
+						div.search
+							form(name="search" method="get").search__form
+								input(type="search" placeholder="Что будем искать").search__input
+								button(type="submit").search__submit
+									|Найти
+						div.basket
+							-var basket = [{name: 'Карта проезда', class: 'map'}, {name: 'История заказов', class: 'history'}, {name: 'Корзина', class: 'bask' }]
+							ul.basket__list
+								each item in basket
+									li.basket__item
+										a(href="#" class="backet__link_#{item.class} backet__link_#{item.class}").backet__link
+											|#{item.name}
 			nav.nav
 			div.breadcrumbs
 			h2.nav-name
