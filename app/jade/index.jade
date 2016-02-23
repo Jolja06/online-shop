@@ -49,20 +49,32 @@ html(lang="ru-Ru")
 											|#{item.name}
 			nav.nav
 				div.section-wrapper
-					-var nav = [{name:'Планшеты', link:'#', active:''}, {name:'Мобильные телефоны', link:'#', active: '-active'}, {name:'Mp3 плееры', link:'#', active:''}, {name:'Персональные компьютеры', link:'#', active:''}, {name:'Ноутбуки', link:'#', active:''}, {name:'Аксессуары', link:'#', active:''}, {name:'Бытовая техника', link:'#', active:''}]
+					-var nav = [{name:'Планшеты', link:'#', active:''}, {name:'Мобильные телефоны', link:'#', active: '_active'}, {name:'Mp3 плееры', link:'#', active:''}, {name:'Персональные компьютеры', link:'#', active:''}, {name:'Ноутбуки', link:'#', active:''}, {name:'Аксессуары', link:'#', active:''}, {name:'Бытовая техника', link:'#', active:''}]
 						
 					ul.nav__list
 						each item in nav
 							li.nav__item
-								a(href="#{item.link}" class="nav__link#{item.active}").nav__link
+								a(href="#{item.link}" class="#{item.active == '_active' ? 'nav__link_active' : ''}").nav__link
 									|#{item.name} 
 
 			div.breadcrumbs
-			h2.nav-name
-			aside.aside
-			div.content
-				div.view-catalog
-				main.catalog
+				div.section-wrapper
+					-var breadcrumbs = [{name: 'Главная >', link: '#'}, {name: 'Каталог', link: '#', active: '_active'}]
+					ul.breadcrumbs__list
+						each item in breadcrumbs
+							li.breadcrumbs__item
+								a(href="#{item.link}" class="#{item.active == '_active' ? 'breadcrumbs__link_active' : ''}").breadcrumbs__link
+									|#{item.name} 
+			div.nav-name
+				div.section-wrapper
+					h2.nav-name__title
+						|Мобильные телефоны
+						
+			div.section-wrapper
+				aside.aside
+				div.content
+					div.view-catalog
+					main.catalog
 					
 
 

@@ -1,0 +1,15 @@
+.breadcrumbs{
+	background: $bg;
+	padding-top: 30px;
+}
+.breadcrumbs__item{
+	display: inline-block;
+}
+.breadcrumbs__link{
+	text-decoration: none;
+	color: $color;
+	&_active{
+		text-decoration: underline;
+		color: $active;
+	}
+}

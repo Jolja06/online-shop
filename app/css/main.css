@@ -66,11 +66,15 @@ ul {
   padding: 0;
   margin: 0; }
 
+body {
+  background: #f4f4f4; }
+
 .wrapper {
   width: 100%; }
 
 .header {
-  width: 100%; }
+  width: 100%;
+  background: #ffffff; }
 
 .header-contact {
   box-sizing: border-box;
@@ -92,6 +96,9 @@ ul {
   border-top: 2px solid #dee1e4;
   height: 96px;
   padding-top: 30px; }
+
+.nav {
+  background: #ffffff; }
 
 .social {
   display: inline-block;
@@ -262,5 +269,24 @@ ul {
   padding: 15px 14px; }
 .nav__link:hover {
   background: #e4e2e2; }
-.nav__link-active {
+.nav__link_active {
   background: #ff6600; }
+
+.breadcrumbs {
+  background: #f4f4f4;
+  padding-top: 30px; }
+
+.breadcrumbs__item {
+  display: inline-block; }
+
+.breadcrumbs__link {
+  text-decoration: none;
+  color: #333333; }
+.breadcrumbs__link_active {
+  text-decoration: underline;
+  color: #ff6600; }
+
+.nav-name__title {
+  font-family: 'OpenSans-Bold';
+  font-size: 20px;
+  margin: 19px 0; }

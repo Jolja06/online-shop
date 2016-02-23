@@ -1,8 +1,12 @@
+body{
+	background: $bg;
+}
 .wrapper{
 	width: 100%;
 }
 .header{
 	width: 100%;
+	background: $fontActive;
 }
 .header-contact{
 	box-sizing: border-box;
@@ -20,4 +24,7 @@
 	border-top: 2px solid $border;
 	height: 96px;
 	padding-top: 30px;
+}
+.nav{
+	background: $fontActive;
 }
