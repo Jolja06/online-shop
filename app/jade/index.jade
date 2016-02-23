@@ -12,7 +12,7 @@ html(lang="ru-Ru")
 		div.wrapper
 			header.header
 				div.header-contact
-					div.header-wrapper
+					div.section-wrapper
 						div.social
 							-var socials = [{soc:'fb', url:'https://www.facebook.com/', text:'facebook'},{soc:'vk', url:'http://vk.com/', text:'vkontakte'},{soc:'twt', url:'https://twitter.com/', text:'twitter'}];
 							ul.social__list
@@ -29,7 +29,7 @@ html(lang="ru-Ru")
 							span.contact__phone.
 								+7 (921) 123-12-13
 				div.header-search
-					div.header-wrapper
+					div.section-wrapper
 						div.logo
 							a(href="/").logo__link
 								img(src="img/logo/logo.png" alt="cooltech").logo__img
@@ -45,9 +45,18 @@ html(lang="ru-Ru")
 							ul.basket__list
 								each item in basket
 									li.basket__item
-										a(href="#" class="backet__link_#{item.class} backet__link_#{item.class}").backet__link
+										a(href="#" class="backet__link_#{item.class}").backet__link
 											|#{item.name}
 			nav.nav
+				div.section-wrapper
+					-var nav = [{name:'Планшеты', link:'#', active:''}, {name:'Мобильные телефоны', link:'#', active: '-active'}, {name:'Mp3 плееры', link:'#', active:''}, {name:'Персональные компьютеры', link:'#', active:''}, {name:'Ноутбуки', link:'#', active:''}, {name:'Аксессуары', link:'#', active:''}, {name:'Бытовая техника', link:'#', active:''}]
+						
+					ul.nav__list
+						each item in nav
+							li.nav__item
+								a(href="#{item.link}" class="nav__link#{item.active}").nav__link
+									|#{item.name} 
+
 			div.breadcrumbs
 			h2.nav-name
 			aside.aside
