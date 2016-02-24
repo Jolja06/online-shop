@@ -76,6 +76,17 @@
 		top: 0;
 		left: 0;
 	}
+	&:hover{
+		&:before{
+			content: '';
+		display: inline-block;
+		position: absolute;
+		@include sprite($radio-hover);
+		background-repeat: no-repeat;
+		top: 0;
+		left: 0;
+		}
+	}
 }
 .radio__input:checked + .radio__label:before{
 	@include sprite($radio-active);
@@ -168,24 +179,24 @@
 	}
 }
 
-$color: (
+$colors: (
 
-	white : #ffffff,
-	grey : #cccccc,
-	black : #000000,
-	darkblue : #0a3153,
-	red : #ff1800,
-	yellow : #fff343,
-	orange : #fb914a,
-	green : #92c37c,
-	blue : #40a6ff,
-	purple : #9870ad,
-	pink : #dc78ad,
-	brown : #7f401d 
+	'white' : #ffffff,
+	'grey' : #cccccc,
+	'black' : #000000,
+	'darkblue' : #0a3153,
+	'red' : #ff1800,
+	'yellow' : #fff343,
+	'orange' : #fb914a,
+	'green' : #92c37c,
+	'blue' : #40a6ff,
+	'purple' : #9870ad,
+	'pink' : #dc78ad,
+	'brown' : #7f401d 
 );
 
 .color__link{
-	@each $colorName, $colorCode in $color {
+	@each $colorName, $colorCode in $colors {
 		&_#{$colorName} {
 			background: $colorCode;
 		}

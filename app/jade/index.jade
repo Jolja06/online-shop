@@ -148,7 +148,30 @@ html(lang="ru-Ru")
 
 				div.content
 					div.view-catalog
-						
+						div.sorting
+							label(for="select").sorting__title
+								|Сортировать по
+							div.select__wrapper
+								select(id="select" name="select").sorting__select
+									option
+										|по популярности
+									option(selected)
+										|по цене
+
+						div.view-catalog-icon
+							span.view-catalog__title
+								|Вид каталога
+							ul.view-catalog__list
+								li.view-catalog__item
+									a(href="#" class="view-catalog__link_table").view-catalog__link
+										|table
+								li.view-catalog__item
+									a(href="#" class="view-catalog__link_thumbnail").view-catalog__link
+										|thumbnail
+								li.view-catalog__item
+									a(href="#" class="view-catalog__link_list").view-catalog__link
+										|link
+
 					main.catalog
 					
 

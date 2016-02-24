@@ -119,23 +119,23 @@ body {
 
 .social__link_fb {
   background-image: url(../img/sprite/sprite.png);
-  background-position: -114px -146px;
+  background-position: -56px -206px;
   width: 26px;
   height: 26px; }
 .social__link_fb:hover {
   background-image: url(../img/sprite/sprite.png);
-  background-position: -219px -56px;
+  background-position: 0px -206px;
   width: 26px;
   height: 26px; }
 
 .social__link_vk {
   background-image: url(../img/sprite/sprite.png);
-  background-position: 0px -146px;
+  background-position: -219px 0px;
   width: 27px;
   height: 26px; }
 .social__link_vk:hover {
   background-image: url(../img/sprite/sprite.png);
-  background-position: -57px -146px;
+  background-position: -120px -146px;
   width: 27px;
   height: 26px; }
 
@@ -146,7 +146,7 @@ body {
   height: 26px; }
 .social__link_twt:hover {
   background-image: url(../img/sprite/sprite.png);
-  background-position: -219px 0px;
+  background-position: -219px -56px;
   width: 26px;
   height: 26px; }
 
@@ -162,7 +162,7 @@ body {
   left: -20px;
   display: inline-block;
   background-image: url(../img/sprite/sprite.png);
-  background-position: -321px -46px;
+  background-position: -325px 0px;
   width: 12px;
   height: 16px; }
 
@@ -177,7 +177,7 @@ body {
 .contact__icon {
   display: inline-block;
   background-image: url(../img/sprite/sprite.png);
-  background-position: -321px 0px;
+  background-position: -177px -146px;
   width: 12px;
   height: 16px;
   margin-right: 10px;
@@ -339,7 +339,7 @@ body {
   top: 19px;
   right: 12px;
   background-image: url(../img/sprite/sprite.png);
-  background-position: -92px -252px;
+  background-position: -276px -262px;
   width: 18px;
   height: 11px; }
 
@@ -362,7 +362,18 @@ body {
   display: inline-block;
   position: absolute;
   background-image: url(../img/sprite/sprite.png);
-  background-position: -51px -202px;
+  background-position: -212px -206px;
+  width: 19px;
+  height: 19px;
+  background-repeat: no-repeat;
+  top: 0;
+  left: 0; }
+.radio__label:hover:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  background-image: url(../img/sprite/sprite.png);
+  background-position: -276px -49px;
   width: 19px;
   height: 19px;
   background-repeat: no-repeat;
@@ -371,7 +382,7 @@ body {
 
 .radio__input:checked + .radio__label:before {
   background-image: url(../img/sprite/sprite.png);
-  background-position: -100px -202px;
+  background-position: -276px -98px;
   width: 19px;
   height: 19px; }
 
@@ -388,7 +399,7 @@ body {
   display: inline-block;
   position: absolute;
   background-image: url(../img/sprite/sprite.png);
-  background-position: -198px -202px;
+  background-position: -276px 0px;
   width: 19px;
   height: 19px;
   background-repeat: no-repeat;
@@ -399,7 +410,7 @@ body {
   display: inline-block;
   position: absolute;
   background-image: url(../img/sprite/sprite.png);
-  background-position: -149px -202px;
+  background-position: -163px -206px;
   width: 19px;
   height: 19px;
   background-repeat: no-repeat;
@@ -410,7 +421,7 @@ body {
 
 .checkbox__input:checked + .checkbox__label:before {
   background-image: url(../img/sprite/sprite.png);
-  background-position: -170px -146px;
+  background-position: -276px -147px;
   width: 19px;
   height: 19px; }
 
@@ -489,3 +500,51 @@ body {
 .content {
   float: right;
   width: 743px; }
+
+.view-catalog {
+  background: #d9e5ea;
+  border-radius: 5px;
+  min-height: 53px; }
+.view-catalog:before, .view-catalog:after {
+  content: "";
+  display: table; }
+.view-catalog:after {
+  clear: both; }
+
+.select__wrapper {
+  display: inline-block;
+  position: relative; }
+
+.sorting {
+  padding-top: 9px;
+  margin: 0 22px;
+  float: left; }
+
+.sorting__select {
+  box-sizing: border-box;
+  color: #7f7f7f;
+  font-family: 'OpenSans-Light';
+  border-radius: 3px;
+  border: 1px solid #dee1e4;
+  border-top: 2px solid #dee1e4;
+  height: 30px;
+  width: 143px;
+  margin-left: 5px;
+  padding-left: 9px; }
+.sorting__select:focus {
+  outline-color: #ff6600; }
+
+.sorting__title, .view-catalog__title {
+  color: #5d656c; }
+
+.view-catalog-icon {
+  float: right; }
+
+.view-catalog__list {
+  display: inline-block; }
+
+.view-catalog__item {
+  display: inline-block; }
+
+.view-catalog__link {
+  display: block; }
