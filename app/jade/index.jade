@@ -1,3 +1,4 @@
+include _layout/_mixin
 doctype html
 html(lang="ru-Ru")
 	head
@@ -72,8 +73,82 @@ html(lang="ru-Ru")
 						
 			div.section-wrapper
 				aside.aside
+					div.category
+						-var category = [{name:'Флагманы', active:'', class: 'flagship'},{name: 'Бюджетная линейка', active: '_active', class: 'budget'}]
+						ul.category__list
+							each item in category
+								li.category__item
+									a(href="#" class="#{item.active == '_active' ? 'category__link_active' : ''}").category__link
+										|#{item.name}
+
+					div.accordion
+						ul.accordion__list
+							li.accordion__item
+								a(href="#").accordion__trigger
+									|Наличие в магазинах
+									i.accordion__up
+								ul.accordion__inner
+									li.accordion__inner-item
+										input(id="all" type="radio" name="availability" checked).radio__input
+										label(for="all").radio__label 
+											|Во всех магазинах
+									li.accordion__inner-item
+										input(id="nearest" type="radio" name="availability").radio__input 
+										label(for="nearest").radio__label
+											|В ближайшем ко мне магазине
+							li.accordion__item
+								a(href="#").accordion__trigger
+									|Бренды
+									i.accordion__up
+
+								+checkbox('accordion__inner', ['lenovo', 'apple', 'samsung', 'asus', 'motorola'])
+
+								li.accordion__inner-reset
+									a(href="#" id="reset-checkbox").reset-checkbox
+										|Сбросить фильтр	
+
+							li.accordion__item
+								div.price
+									a(href="#").accordion__trigger
+										|Цена
+										i.accordion__up
+									ul.accordion__inner
+										li.accordion__inner-item
+											span.price__text от
+											input(type="text" id="amount0").price__input
+											span.price__text до
+											input(type="text" id="amount1").price__input
+										li.accordion__inner-item
+											div
+												div
+												span
+												span
+
+							li.accordion__item
+								a(href="#").accordion__trigger
+									|Цвет
+									i.accordion__up
+								ul.accordion__inner
+									li.accordion__inner-item
+										-var color = ['white', 'grey', 'black', 'darkblue', 'red', 'yellow', 'orange', 'green', 'blue', 'purple', 'pink', 'brown']
+										
+										ul.color__list
+											each item in color
+												li.color__item
+													a(href="#" class="color__link_#{item}" ).color__link
+														|#{item}
+							li.accordion__item
+								a(href="#").accordion__trigger
+									|Операционная система
+									i.accordion__up
+								+checkbox('accordion__inner', ['android', 'iOs', 'windows mobile', 'symbian', 'custom'])
+							li.accordion__inner-reset
+									a(href="#" id="reset-checkbox").reset-checkbox
+										|Сбросить фильтр
+
 				div.content
 					div.view-catalog
+						
 					main.catalog
 					
 
@@ -84,4 +159,6 @@ html(lang="ru-Ru")
 
 		// bower:js
 		// endbower
+
+		script(src="js/main.js")
 	
