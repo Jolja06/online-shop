@@ -834,6 +834,86 @@ body {
   vertical-align: middle;
   margin-right: 8px; }
 
+.goods__list_thumbnail {
+  border: none;
+  overflow: auto;
+  border-radius: 0px;
+  margin-left: -11px;
+  background: transparent;
+  box-sizing: border-box; }
+.goods__list_thumbnail .goods__item {
+  display: inline-block;
+  vertical-align: top;
+  width: 235px;
+  border-top: 0;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #dee1e4;
+  margin-left: 11px;
+  margin-bottom: 11px;
+  background: #ffffff;
+  box-sizing: border-box; }
+.goods__list_thumbnail .goods__item-inner {
+  padding: 15px 10px; }
+.goods__list_thumbnail .goods__left {
+  float: none; }
+.goods__list_thumbnail .goods__slideshow {
+  width: auto;
+  text-align: center;
+  float: none; }
+.goods__list_thumbnail .goods__slideshow-display {
+  display: inline-block;
+  vertical-align: top; }
+.goods__list_thumbnail .goods__slideshow-item {
+  display: inline-block;
+  vertical-align: top;
+  float: none; }
+.goods__list_thumbnail .goods__desc {
+  width: auto;
+  float: none;
+  margin-left: 0; }
+.goods__list_thumbnail .goods__article {
+  display: none; }
+.goods__list_thumbnail .goods__right {
+  position: static;
+  width: auto; }
+.goods__list_thumbnail .goods__info {
+  border-left: none;
+  text-align: center;
+  padding-left: 0; }
+.goods__list_thumbnail .goods__info-bottom {
+  position: static; }
+.goods__list_thumbnail .goods__info-bottom:before, .goods__list_thumbnail .goods__info-bottom:after {
+  content: "";
+  display: table; }
+.goods__list_thumbnail .goods__info-bottom:after {
+  clear: both; }
+.goods__list_thumbnail .goods__buy-btn {
+  float: right; }
+.goods__list_thumbnail .goods__availability {
+  float: left;
+  margin-top: 8px; }
+.goods__list_thumbnail .goods__option-item {
+  padding: 3px 2px; }
+.goods__list_thumbnail .goods__option-item:before, .goods__list_thumbnail .goods__option-item:after {
+  content: "";
+  display: table; }
+.goods__list_thumbnail .goods__option-item:after {
+  clear: both; }
+.goods__list_thumbnail .goods__option-key {
+  display: block;
+  float: left;
+  width: 50%;
+  text-align: left; }
+.goods__list_thumbnail .goods__option-value {
+  display: block;
+  float: right;
+  width: 50%;
+  text-align: right; }
+
+.goods__option-item_bg {
+  background: #e6e6e6; }
+
 .goods__list {
   margin-bottom: 65px; }
 
