@@ -164,16 +164,74 @@ html(lang="ru-Ru")
 							div.view-catalog__wrapper
 								ul.view-catalog__list
 									li.view-catalog__item
-										a(href="#" class="view-catalog__link_table").view-catalog__link
+										a(href="#" class="view-catalog__link_table" data-view="table").view-catalog__link
 											|table
 									li.view-catalog__item
-										a(href="#" class="view-catalog__link_thumbnail").view-catalog__link
+										a(href="#" class="view-catalog__link_thumbnail" data-view="thumbnail").view-catalog__link
 											|thumbnail
 									li.view-catalog__item
-										a(href="#" class="view-catalog__link_list").view-catalog__link
+										a(href="#" class="view-catalog__link_list" data-view="list").view-catalog__link
 											|link
 
 					main.catalog
+						ul.goods__list
+							- for (var i = 0; i < 9; i++)
+								li.goods__item
+									div.goods__item-inner
+										div.goods__left
+											div.goods__slideshow
+												div.goods__slideshow-block
+													a(href="#").goods__slideshow-display
+														img(src="http://lorempixel.com/200/200/technics/6" alt="").goods__slideshow-img
+													ul.goods__slideshow-thumbs
+														- for (var j = 0; j < 3; j++)
+															li.goods__slideshow-item
+																a(href="#").goods__slideshow-link
+																	img(src="http://lorempixel.com/40/40/technics/" + j alt="").goods__slideshow-thumb-img
+												div.goods__article
+													div.goods__article-word 
+														|Артикул
+													div.goods__article-art 
+														|189238
+											div.goods__desc
+												div.goods__desc-title 
+													|Samsung GT-I9301I GALAXY S 3 
+												ul.goods__desc-options
+													- var options = {'Тип SIM-карты': 'Micro-SIM', 'Количество SIM-карт': '1', 'Цвет':'Белый', 'ОС': 'Android', 'Связь 3G': 'Есть', '4G(LTE)': 'Нет', 'GPS-модуль': 'Есть'}
+													each value, key in options
+														li.goods__option-key= key
+														li.goods__option-value= value
+												div.goods__rating
+													ul.goods__rating-stars
+														li.goods__rating-stars-item.goods__rating-stars-item_full
+														li.goods__rating-stars-item.goods__rating-stars-item_full
+														li.goods__rating-stars-item.goods__rating-stars-item_full
+														li.goods__rating-stars-item.goods__rating-stars-item_full
+														li.goods__rating-stars-item
+													div.goods__rating-amount 4
+										div.goods__right
+											div.goods__info
+												div.goods__price
+													|11 290
+													i.rub
+											div.goods__info-bottom
+												a(href="#").goods__buy-btn
+													|В корзину
+												div.goods__availability
+													|В наличии
+						div.pagination
+							ul.pagination__list
+								li.pagination__item.pagination__item__prev
+									a(href="#").pagination__link
+										div.pagination__mark
+								- for (var i = 1; i < 4; i++)
+									li.pagination__item
+										a(href="#").pagination__link
+											div.pagination__mark= i
+								li.pagination__item.pagination__item__next
+									a(href="#").pagination__link
+										div.pagination__mark
+
 					
 
 

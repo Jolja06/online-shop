@@ -1,0 +1,53 @@
+.goods__list{
+	margin-bottom: 65px;
+}
+.pagination{
+	text-align: right;
+}
+.pagination__list{
+	@include inline-block();
+	border-radius: 3px;
+	overflow: hidden;
+
+}
+.pagination__item{
+	width: 25px;
+	height: 25px;
+	@include inline-block();
+	border-radius: 3px;
+	border: 1px solid $border;
+	position: relative;
+	overflow: hidden;
+}
+.pagination__item__prev{
+	.pagination__mark{
+		@include sprite($prev);
+	}
+	
+}
+.pagination__item__next{
+	.pagination__mark{
+		@include sprite($next);
+	}
+}
+.pagination__link{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: block;
+	background: $fontActive;
+
+	&:hover{
+		background: $paghover;
+	}
+}
+.pagination__mark{
+	@include absolute-center();
+	line-height: 26px;
+	text-align: center;
+	font-family: 'OpenSans-Bold';
+	font-size: 12px;
+	color: $font;
+}
