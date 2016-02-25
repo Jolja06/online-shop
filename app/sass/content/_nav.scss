@@ -1,14 +1,25 @@
 .nav__list{
-	padding: 15px 4px;
+	text-align: justify;
+	font-size: 0;
+
+	&:after{
+		content: '';
+		height: 0;
+		width: 100%;
+		display: inline-block;
+		visibility: hidden;
+	}
 }
 .nav__item{
 	display: inline-block;
-	font-size: 16px;
 }
 .nav__link{
+	font-size: 16px;
+	line-height: 18px;
+	display: inline-block;
 	color: $color;
 	text-decoration: none;
-	padding: 15px 14px;
+	padding: 18px 16px;
 	&:hover{
 		background: $nav-hover;
 	}

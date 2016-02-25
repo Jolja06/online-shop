@@ -257,16 +257,25 @@ body {
   color: #ff6600; }
 
 .nav__list {
-  padding: 15px 4px; }
+  text-align: justify;
+  font-size: 0; }
+.nav__list:after {
+  content: '';
+  height: 0;
+  width: 100%;
+  display: inline-block;
+  visibility: hidden; }
 
 .nav__item {
-  display: inline-block;
-  font-size: 16px; }
+  display: inline-block; }
 
 .nav__link {
+  font-size: 16px;
+  line-height: 18px;
+  display: inline-block;
   color: #333333;
   text-decoration: none;
-  padding: 15px 14px; }
+  padding: 18px 16px; }
 .nav__link:hover {
   background: #e4ebee; }
 .nav__link_active {
