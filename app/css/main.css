@@ -268,7 +268,7 @@ body {
   text-decoration: none;
   padding: 15px 14px; }
 .nav__link:hover {
-  background: #e4e2e2; }
+  background: #e4ebee; }
 .nav__link_active {
   background: #ff6600; }
 
@@ -498,13 +498,16 @@ body {
   background: #7f401d; }
 
 .content {
+  box-sizing: border-box;
   float: right;
   width: 743px; }
 
 .view-catalog {
+  box-sizing: border-box;
   background: #d9e5ea;
   border-radius: 5px;
-  min-height: 53px; }
+  min-height: 53px;
+  position: relative; }
 .view-catalog:before, .view-catalog:after {
   content: "";
   display: table; }
@@ -512,10 +515,12 @@ body {
   clear: both; }
 
 .select__wrapper {
+  box-sizing: border-box;
   display: inline-block;
   position: relative; }
 
 .sorting {
+  box-sizing: border-box;
   padding-top: 9px;
   margin: 0 22px;
   float: left; }
@@ -537,14 +542,67 @@ body {
 .sorting__title, .view-catalog__title {
   color: #5d656c; }
 
-.view-catalog-icon {
+.view-catalog__icon {
+  float: right;
+  display: block;
+  width: 262px; }
+
+.view-catalog__title {
+  display: inline-block;
+  line-height: 53px; }
+
+.view-catalog__wrapper {
   float: right; }
 
-.view-catalog__list {
-  display: inline-block; }
-
 .view-catalog__item {
-  display: inline-block; }
+  display: inline-block;
+  overflow: hidden;
+  box-sizing: border-box;
+  border-left: 1px solid #dee1e4;
+  padding: 18px 16px;
+  margin-bottom: -3px; }
 
 .view-catalog__link {
-  display: block; }
+  display: block;
+  color: transparent;
+  font-size: 0;
+  box-sizing: content-box; }
+.view-catalog__link_table:after {
+  content: "";
+  display: block;
+  background-image: url(../img/sprite/sprite.png);
+  background-position: -46px -262px;
+  width: 16px;
+  height: 16px;
+  margin: 0; }
+.view-catalog__link_thumbnail:after {
+  content: "";
+  display: block;
+  background-image: url(../img/sprite/sprite.png);
+  background-position: -138px -262px;
+  width: 16px;
+  height: 16px;
+  margin: 0; }
+.view-catalog__link_list:after {
+  content: "";
+  display: block;
+  background-image: url(../img/sprite/sprite.png);
+  background-position: -276px -196px;
+  width: 16px;
+  height: 16px;
+  margin: 0; }
+.view-catalog__link_table:hover:after {
+  background-image: url(../img/sprite/sprite.png);
+  background-position: 0px -262px;
+  width: 16px;
+  height: 16px; }
+.view-catalog__link_thumbnail:hover:after {
+  background-image: url(../img/sprite/sprite.png);
+  background-position: -92px -262px;
+  width: 16px;
+  height: 16px; }
+.view-catalog__link_list:hover:after {
+  background-image: url(../img/sprite/sprite.png);
+  background-position: -184px -262px;
+  width: 16px;
+  height: 16px; }

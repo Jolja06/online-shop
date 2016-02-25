@@ -158,19 +158,20 @@ html(lang="ru-Ru")
 									option(selected)
 										|по цене
 
-						div.view-catalog-icon
+						div.view-catalog__icon
 							span.view-catalog__title
 								|Вид каталога
-							ul.view-catalog__list
-								li.view-catalog__item
-									a(href="#" class="view-catalog__link_table").view-catalog__link
-										|table
-								li.view-catalog__item
-									a(href="#" class="view-catalog__link_thumbnail").view-catalog__link
-										|thumbnail
-								li.view-catalog__item
-									a(href="#" class="view-catalog__link_list").view-catalog__link
-										|link
+							div.view-catalog__wrapper
+								ul.view-catalog__list
+									li.view-catalog__item
+										a(href="#" class="view-catalog__link_table").view-catalog__link
+											|table
+									li.view-catalog__item
+										a(href="#" class="view-catalog__link_thumbnail").view-catalog__link
+											|thumbnail
+									li.view-catalog__item
+										a(href="#" class="view-catalog__link_list").view-catalog__link
+											|link
 
 					main.catalog
 					

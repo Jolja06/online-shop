@@ -1,18 +1,23 @@
 .content{
+	box-sizing: border-box;
 	float: right;
 	width: 743px;
 }
 .view-catalog{
+	box-sizing: border-box;
 	@include clearfix();
 	background: $bgAcive;
 	border-radius: 5px; 
 	min-height: 53px;
+	position: relative;
 }
 .select__wrapper{
+	box-sizing: border-box;
 	display: inline-block;
 	position: relative;
 }
 .sorting{
+	box-sizing: border-box;
 	padding-top: 9px;
 	margin: 0 22px;
 	float: left;
@@ -34,18 +39,60 @@
 }
 .sorting__title{
 	color: $text-content;
-}.view-catalog-icon{
+}
+.view-catalog__icon{
 	float: right;
+	display: block;
+	width: 262px;
 }
 .view-catalog__title{
 	@extend .sorting__title;
-}
-.view-catalog__list{
 	display: inline-block;
+	line-height: 53px;
 }
-.view-catalog__item{
-	display: inline-block;
+.view-catalog__wrapper{
+	float: right;
 }
+.view-catalog__item{	
+	display: inline-block; 
+	overflow: hidden;
+	box-sizing: border-box;
+	border-left: 1px solid $border;
+	padding: 18px 16px;
+	margin-bottom: -3px;
+}
+
+$views : (
+
+	_table : $view-table,
+	_thumbnail : $view-thumbnail,
+	_list : $view-list
+
+);
+$views-active : (
+	_table : $view-table-active,
+	_thumbnail : $view-thumbnail-active,
+	_list : $view-list-active
+);
+
 .view-catalog__link{
 	display: block;
+	color: transparent;
+	font-size: 0;
+	box-sizing: content-box;
+	@each $view, $viewType in $views {
+		&#{$view} {
+			&:after{
+				content: "";
+				display: block;
+				@include sprite($viewType);
+				margin: 0;
+			}
+		}
+	}
+	@each $view, $viewType in $views-active {
+			&#{$view}:hover:after{
+				@include sprite($viewType);
+			}
+		}
 }
