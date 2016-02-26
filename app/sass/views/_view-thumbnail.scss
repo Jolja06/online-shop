@@ -1,8 +1,8 @@
 .goods__list_thumbnail{
 	border: none;
-	overflow: auto;
+	overflow: hidden;
 	border-radius: 0px;
-	margin-left: -11px;
+	margin-left: -15px;
 	background: transparent;
 	box-sizing: border-box;
 
@@ -13,14 +13,14 @@
 		text-align: center;
 		border-radius: 5px;
 		border: 1px solid $border;
-		margin-left: 11px;
-		margin-bottom: 11px;
+		margin-left: 15px;
+		margin-bottom: 18px;
 		background: $fontActive;
 		box-sizing: border-box;
 
 	}
 	.goods__item-inner{
-		padding: 15px 10px;
+		padding: 15px 11px;
 	}
 	.goods__left{
 		float: none;
@@ -42,6 +42,12 @@
 		float: none;
 		margin-left: 0;
 	}
+	.goods__desc-options{
+		margin-bottom: 2px;
+	}
+	.goods__rating{
+		margin-bottom: 5px;
+	}
 	.goods__article{
 		display: none;
 	}
@@ -53,6 +59,7 @@
 		border-left: none;
 		text-align: center;
 		padding-left: 0;
+		margin-bottom: 4px;
 	}
 	.goods__info-bottom{
 		position: static;
@@ -64,6 +71,7 @@
 	.goods__availability{
 		float: left;
 		margin-top: 8px;
+		margin-left: 10px;
 	}
 	.goods__option-item{
 		@include clearfix();
