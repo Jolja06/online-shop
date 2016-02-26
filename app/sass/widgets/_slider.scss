@@ -1,0 +1,23 @@
+.ui-slider-horizontal {
+	height: 3px;
+	background: $border;
+	border-radius: 0;
+	border: none;
+
+	*{
+		outline: none !important;
+	}
+	.ui-slider-range{
+		background: $active;
+	}
+	.ui-slider-handle{
+		@include sprite($range);
+		border: none;
+		margin-left: -.3em;
+		top: 0;
+		border-radius: 0;
+		cursor: pointer;
+		background-color: transparent;
+
+	}
+}

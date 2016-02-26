@@ -76,6 +76,7 @@
 	.goods__option-item{
 		@include clearfix();
 		padding: 3px 2px;
+		display: block;
 	}
 	.goods__option-key{
 		display: block;
@@ -89,7 +90,7 @@
 		width: 50%;
 		text-align: right;
 	}
+	.goods__option-item_bg{
+		background: $bg-thumbnail;
 }
-.goods__option-item_bg{
-	background: $bg-thumbnail;
 }

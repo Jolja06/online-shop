@@ -98,6 +98,10 @@
 .goods__desc-options{
 	margin-bottom: 14px;
 }
+.goods__option-item{
+	background: transparent;
+	display: inline;
+}
 .goods__option-key{
 	display: inline;
 	font-size: 14px;
@@ -164,7 +168,7 @@
 	font-family: 'OpenSans-Bold';
 	border-radius: 5px;
 	color: $fontActive;
-	margin-bottom: 5px;
+	margin-bottom: 8px;
 }
 .goods__availability{
 	font-family: 'OpenSans-Bold';

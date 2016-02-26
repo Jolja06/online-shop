@@ -1,4 +1,5 @@
 @import "compass";
+@import "plagins/_jquery-ui";
 @import "layouts/_mixins";
 @import "layouts/_fonts";
 
@@ -7,6 +8,7 @@
 @import "layouts/_variables";
 @import "layouts/_layouts";
 
+@import "widgets/_slider";
 @import "content/_header";
 @import "content/_nav";
 @import "content/_breadcrumbs";

@@ -53,7 +53,7 @@
 	@include sprite($arrow-up);
 }
 .accordion__inner{
-	padding: 0 12px 0 27px;
+	padding: 0 27px;
 }
 .accordion__inner-item{
 	padding-bottom: 19px;
@@ -141,7 +141,7 @@
 	width: 71px;
 	height: 25px;
 	font-family: "OpenSans-Semibold";
-	margin-right: 47px;
+	margin-right: 50px;
 	padding-left: 8px;
 	border: 1px solid $border;
 	border-radius: 3px;
@@ -153,6 +153,9 @@
 		outline-color: $active;
 	}
 
+}
+.price-right{
+	float: right
 }
 .color__list{
 	margin: -9px 0 0 -9px;

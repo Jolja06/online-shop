@@ -112,17 +112,14 @@ html(lang="ru-Ru")
 									a(href="#").accordion__trigger
 										|Цена
 										i.accordion__up
-									ul.accordion__inner
+									ul.accordion__inner.price__list
 										li.accordion__inner-item
 											span.price__text от
-											input(type="text" id="amount0").price__input
+											input(type="text" ).price__input.price__input_from.price-left
 											span.price__text до
-											input(type="text" id="amount1").price__input
+											input(type="text" ).price__input.price__input_to.price-right
 										li.accordion__inner-item
-											div
-												div
-												span
-												span
+											div(class="price__element" data-min="0" data-max="25000")
 
 							li.accordion__item
 								a(href="#").accordion__trigger

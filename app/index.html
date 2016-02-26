@@ -123,15 +123,13 @@
 							</li>
 							<li class="accordion__item">
 								<div class="price"><a href="#" class="accordion__trigger">Цена<i class="accordion__up"></i></a>
-									<ul class="accordion__inner">
+									<ul class="accordion__inner price__list">
 										<li class="accordion__inner-item"><span class="price__text">от</span>
-											<input type="text" id="amount0" class="price__input"><span class="price__text">до</span>
-											<input type="text" id="amount1" class="price__input">
+											<input type="text" class="price__input price__input_from price-left"><span class="price__text">до</span>
+											<input type="text" class="price__input price__input_to price-right">
 										</li>
 										<li class="accordion__inner-item">
-											<div>
-												<div></div><span></span><span></span>
-											</div>
+											<div data-min="0" data-max="25000" class="price__element"></div>
 										</li>
 									</ul>
 								</div>
