@@ -22,7 +22,11 @@ var SliderWidget = (function(){
 					_insertValues($this);
 				}
 			});
-		})	
+		});
+
+		$('.sorting__select').select2({
+			minimumResultsForSearch: Infinity
+		});	
 	}
 
 	function _insertValues ($this) {
@@ -36,6 +40,10 @@ var SliderWidget = (function(){
 		from.val(values[0]);
 		to.val(values[1]);
 	}
+
+	
+	
+	
 
 	return {
 		init: init

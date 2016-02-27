@@ -6,6 +6,7 @@ body{
 }
 .header{
 	width: 100%;
+	min-width: 1100px;
 	background: $fontActive;
 }
 .header-contact{
@@ -27,4 +28,11 @@ body{
 }
 .nav{
 	background: $fontActive;
+	min-width: 1100px;
+}
+.breadcrumbs{
+	min-width: 1100px;
+}
+.nav-name{
+	min-width: 1100px;
 }

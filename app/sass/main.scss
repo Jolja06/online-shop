@@ -1,5 +1,6 @@
 @import "compass";
 @import "plagins/_jquery-ui";
+@import "plagins/_select2";
 @import "layouts/_mixins";
 @import "layouts/_fonts";
 
@@ -9,11 +10,12 @@
 @import "layouts/_layouts";
 
 @import "widgets/_slider";
+@import "widgets/_select";
 @import "content/_header";
 @import "content/_nav";
 @import "content/_breadcrumbs";
 @import "content/_nav-name";
 @import "content/_aside"; 
 @import "content/_content"; 
-@import "content/_catalog";
+@import "content/_catalog"; 
 @import "content/_pagination";
