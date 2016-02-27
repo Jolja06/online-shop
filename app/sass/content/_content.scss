@@ -40,14 +40,6 @@
 .view-catalog__wrapper{
 	float: right;
 }
-.view-catalog__item{	
-	display: inline-block; 
-	overflow: hidden;
-	box-sizing: border-box;
-	border-left: 1px solid $border;
-	padding: 18px 16px;
-	margin-bottom: -3px;
-}
 
 $views : (
 
@@ -61,6 +53,26 @@ $views-active : (
 	_thumbnail : $view-thumbnail-active,
 	_list : $view-list-active
 );
+.view-catalog__item{	
+	display: inline-block; 
+	overflow: hidden;
+	box-sizing: border-box;
+	border-left: 1px solid $border;
+	padding: 18px 16px;
+	margin-bottom: -3px;
+
+	&.active{
+		.view-catalog__link{
+			@each $view, $viewType in $views-active {
+					&#{$view}{
+						@include sprite($viewType);
+					}
+				}
+		}
+	}
+}
+
+
 
 .view-catalog__link{
 	display: block;
@@ -69,17 +81,19 @@ $views-active : (
 	box-sizing: content-box;
 	@each $view, $viewType in $views {
 		&#{$view} {
-			&:after{
-				content: "";
-				display: block;
-				@include sprite($viewType);
-				margin: 0;
-			}
+			@include sprite($viewType);
+			margin: 0;
 		}
 	}
 	@each $view, $viewType in $views-active {
-			&#{$view}:hover:after{
-				@include sprite($viewType);
-			}
+		&#{$view}:hover{
+			@include sprite($viewType);
 		}
+	}
+
+	@each $view, $viewType in $views-active {
+		&#{$view}.active{
+			@include sprite($viewType);
+		}
+	}
 }

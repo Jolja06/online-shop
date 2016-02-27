@@ -1,11 +1,19 @@
 var SliderWidget = (function(){
 
 	function init () {
+		_setUpListners();
+		slider();
+	}
+
+	function _setUpListners () {
+
+	}
+
+	function slider () {
 
 		$('.price__element').each(function(){
 
-			var
-				$this = $(this),
+			var	$this = $(this),
 				min = parseInt($this.data('min')),
 				max = parseInt($this.data('max'));
 
@@ -29,9 +37,9 @@ var SliderWidget = (function(){
 		});	
 	}
 
+
 	function _insertValues ($this) {
-		var 
-			container = $this.closest('.price__list'),
+		var container = $this.closest('.price__list'),
 			from = container.find('.price__input_from'),
 			to = container.find('.price__input_to');
 
@@ -41,13 +49,41 @@ var SliderWidget = (function(){
 		to.val(values[1]);
 	}
 
-	
-	
-	
+	return {
+		init: init,
+		slider: slider
+	}
+
+})();
+
+var ChangeView = (function () {
+
+	function init () {
+		_setUpListners ();
+	}
+
+	function _setUpListners () {
+
+		$('.view-catalog__link').on('click', _activeView);
+
+	}
+
+	function _activeView (e) {
+		e.preventDefault();
+
+		var $this = $(this);
+
+		$this.closest('.view-catalog__item').addClass('active')
+			.siblings().removeClass('active');
+
+
+
+	}
 
 	return {
-		init: init
+		init : init,
 	}
 })();
 
 SliderWidget.init();
+ChangeView.init();

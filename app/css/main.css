@@ -2673,47 +2673,71 @@ body {
   border-left: 1px solid #dee1e4;
   padding: 18px 16px;
   margin-bottom: -3px; }
+.view-catalog__item.active .view-catalog__link_table {
+  background-image: url(../img/sprite/sprite.png);
+  background-position: -138px -257px;
+  width: 16px;
+  height: 16px; }
+.view-catalog__item.active .view-catalog__link_thumbnail {
+  background-image: url(../img/sprite/sprite.png);
+  background-position: 0px -257px;
+  width: 16px;
+  height: 16px; }
+.view-catalog__item.active .view-catalog__link_list {
+  background-image: url(../img/sprite/sprite.png);
+  background-position: -46px -257px;
+  width: 16px;
+  height: 16px; }
 
 .view-catalog__link {
   display: block;
   color: transparent;
   font-size: 0;
   box-sizing: content-box; }
-.view-catalog__link_table:after {
-  content: "";
-  display: block;
+.view-catalog__link_table {
   background-image: url(../img/sprite/sprite.png);
   background-position: -184px -257px;
   width: 16px;
   height: 16px;
   margin: 0; }
-.view-catalog__link_thumbnail:after {
-  content: "";
-  display: block;
+.view-catalog__link_thumbnail {
   background-image: url(../img/sprite/sprite.png);
   background-position: -275px -190px;
   width: 16px;
   height: 16px;
   margin: 0; }
-.view-catalog__link_list:after {
-  content: "";
-  display: block;
+.view-catalog__link_list {
   background-image: url(../img/sprite/sprite.png);
   background-position: -275px -98px;
   width: 16px;
   height: 16px;
   margin: 0; }
-.view-catalog__link_table:hover:after {
+.view-catalog__link_table:hover {
   background-image: url(../img/sprite/sprite.png);
   background-position: -138px -257px;
   width: 16px;
   height: 16px; }
-.view-catalog__link_thumbnail:hover:after {
+.view-catalog__link_thumbnail:hover {
   background-image: url(../img/sprite/sprite.png);
   background-position: 0px -257px;
   width: 16px;
   height: 16px; }
-.view-catalog__link_list:hover:after {
+.view-catalog__link_list:hover {
+  background-image: url(../img/sprite/sprite.png);
+  background-position: -46px -257px;
+  width: 16px;
+  height: 16px; }
+.view-catalog__link_table.active {
+  background-image: url(../img/sprite/sprite.png);
+  background-position: -138px -257px;
+  width: 16px;
+  height: 16px; }
+.view-catalog__link_thumbnail.active {
+  background-image: url(../img/sprite/sprite.png);
+  background-position: 0px -257px;
+  width: 16px;
+  height: 16px; }
+.view-catalog__link_list.active {
   background-image: url(../img/sprite/sprite.png);
   background-position: -46px -257px;
   width: 16px;
