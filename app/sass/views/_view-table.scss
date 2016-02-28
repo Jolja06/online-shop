@@ -48,6 +48,12 @@
 .goods__slideshow-item{
 	margin-left: 15px;
 	float: left;
+
+	&.active{
+		.goods__slideshow-link{
+			border: 1px solid $active;
+		}
+	}
 }
 .goods__slideshow-link{
 	@extend .color__link;

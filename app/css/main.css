@@ -2805,6 +2805,8 @@ body {
 .goods__slideshow-item {
   margin-left: 15px;
   float: left; }
+.goods__slideshow-item.active .goods__slideshow-link {
+  border: 1px solid #ff6600; }
 
 .goods__slideshow-link {
   width: 34px;

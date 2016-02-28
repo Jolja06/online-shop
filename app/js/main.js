@@ -139,6 +139,9 @@ var SlideShow = (function () {
 		e.preventDefault();
 		var $this = $(this);
 
+		$this.closest('.goods__slideshow-item').addClass('active')
+			.siblings('.goods__slideshow-item').removeClass('active')
+
 		_changeSlide($this);
 
 		function _changeSlide ($this) {
