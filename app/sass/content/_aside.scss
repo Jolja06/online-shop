@@ -36,6 +36,9 @@
 		border-top: none;
 	}
 }
+.accordion__item_check{
+	margin-left: 30px;
+}
 .accordion__trigger{
 	position: relative;
 	display: block;
@@ -66,7 +69,6 @@
 	}
 }
 .radio__label{
-	margin-left: 30px;
 	&:before{
 		content: '';
 		display: inline-block;
@@ -75,6 +77,7 @@
 		background-repeat: no-repeat;
 		top: 0;
 		left: 0;
+		margin-left: -30px;
 	}
 	&:hover{
 		&:before{
@@ -98,7 +101,6 @@
 	}
 }
 .checkbox__label{
-	margin-left: 30px;
 	text-transform: capitalize;
 	&:before{
 		content: '';
@@ -108,6 +110,7 @@
 		background-repeat: no-repeat;
 		top: 0;
 		left: 0;
+		margin-left: -30px;
 	}
 	&:hover{
 		&:before{

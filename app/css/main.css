@@ -2446,6 +2446,9 @@ body {
 .accordion__item:first-child {
   border-top: none; }
 
+.accordion__item_check {
+  margin-left: 30px; }
+
 .accordion__trigger {
   position: relative;
   display: block;
@@ -2477,8 +2480,6 @@ body {
 .radio__input:focus {
   outline: none; }
 
-.radio__label {
-  margin-left: 30px; }
 .radio__label:before {
   content: '';
   display: inline-block;
@@ -2489,7 +2490,8 @@ body {
   height: 19px;
   background-repeat: no-repeat;
   top: 0;
-  left: 0; }
+  left: 0;
+  margin-left: -30px; }
 .radio__label:hover:before {
   content: '';
   display: inline-block;
@@ -2514,7 +2516,6 @@ body {
   outline: none; }
 
 .checkbox__label {
-  margin-left: 30px;
   text-transform: capitalize; }
 .checkbox__label:before {
   content: '';
@@ -2526,7 +2527,8 @@ body {
   height: 19px;
   background-repeat: no-repeat;
   top: 0;
-  left: 0; }
+  left: 0;
+  margin-left: -30px; }
 .checkbox__label:hover:before {
   content: '';
   display: inline-block;

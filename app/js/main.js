@@ -54,7 +54,7 @@ var SliderWidget = (function(){
 		slider: slider
 	}
 
-})();
+	})();
 
 var ChangeView = (function () {
 
@@ -71,7 +71,7 @@ var ChangeView = (function () {
 
 
 	function _changeView (e) {
-	e.preventDefault();
+		e.preventDefault();
 	
 		var $this = $(this);
 		
@@ -105,5 +105,25 @@ var ChangeView = (function () {
 	}
 })();
 
+var ResetChecked = (function() {
+	function init (){
+		_setUpListner()
+	}
+
+	function _setUpListner() {
+		$('.reset-checkbox').on('click' , _reset)
+	}
+
+	function _reset (e) {
+		e.preventDefault();
+
+		$('.accordion__inner input[type=checkbox]').removeProp('checked');
+	}
+	return {
+		init: init
+	}
+})();
+
 SliderWidget.init();
 ChangeView.init();
+ResetChecked.init();

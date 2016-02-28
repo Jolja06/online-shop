@@ -1,6 +1,6 @@
 mixin checkbox(className, titles)
   ul(class=className)
     each item in titles
-      li(class="#{className}-item")
+      li(class="#{className}-item accordion__item_check")
         input(type="checkbox" id=item).checkbox__input
         label(for="#{item}").checkbox__label #{item}
