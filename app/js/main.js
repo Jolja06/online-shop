@@ -107,10 +107,10 @@ var ChangeView = (function () {
 
 var ResetChecked = (function() {
 	function init (){
-		_setUpListner()
+		_setUpListners()
 	}
 
-	function _setUpListner() {
+	function _setUpListners() {
 		$('.reset-checkbox').on('click' , _reset)
 	}
 
@@ -124,6 +124,42 @@ var ResetChecked = (function() {
 	}
 })();
 
+var SlideShow = (function () {
+
+	function init () {
+		_setUpListners();
+	}
+
+	function _setUpListners () {
+		$('.goods__slideshow-link').on('click', _slideShow);
+		
+	}
+
+	function _slideShow (e) {
+		e.preventDefault();
+		var $this = $(this);
+
+		_changeSlide($this);
+
+		function _changeSlide ($this) {
+			var block = $this.closest('.goods__slideshow'),
+				path = $this.find('img').attr('src'),
+				display = block.find('.goods__slideshow-img');
+
+			display.fadeOut(function() {
+				$(this).attr('src', path).fadeIn();
+			});
+		}
+		
+	}
+
+	return{
+		init: init
+	}
+
+})();
+
 SliderWidget.init();
 ChangeView.init();
 ResetChecked.init();
+SlideShow.init();
