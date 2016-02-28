@@ -83,11 +83,11 @@ html(lang="ru-Ru")
 
 					div.accordion
 						ul.accordion__list
-							li.accordion__item
+							li.accordion__item.active
 								a(href="#").accordion__trigger
 									|Наличие в магазинах
 									i.accordion__up
-								ul.accordion__inner
+								ul(style="display:block").accordion__inner
 									li.accordion__inner-item.accordion__item_check
 										input(id="all" type="radio" name="availability" checked).radio__input
 										label(for="all").radio__label 
@@ -103,9 +103,7 @@ html(lang="ru-Ru")
 
 								+checkbox('accordion__inner', ['lenovo', 'apple', 'samsung', 'asus', 'motorola'])
 
-								li.accordion__inner-reset
-									a(href="#").reset-checkbox
-										|Сбросить фильтр	
+								
 
 							li.accordion__item
 								div.price
@@ -139,9 +137,7 @@ html(lang="ru-Ru")
 									|Операционная система
 									i.accordion__up
 								+checkbox('accordion__inner', ['android', 'iOs', 'windows mobile', 'symbian', 'custom'])
-							li.accordion__inner-reset
-									a(href="#").reset-checkbox
-										|Сбросить фильтр
+							
 
 				div.content
 					div.view-catalog

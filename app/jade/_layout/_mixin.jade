@@ -4,3 +4,6 @@ mixin checkbox(className, titles)
       li(class="#{className}-item accordion__item_check")
         input(type="checkbox" id=item).checkbox__input
         label(for="#{item}").checkbox__label #{item}
+    li.accordion__inner-reset
+      a(href="#").reset-checkbox
+        |Сбросить фильтр    

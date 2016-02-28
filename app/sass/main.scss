@@ -19,3 +19,7 @@
 @import "content/_content"; 
 @import "content/_catalog"; 
 @import "content/_pagination";
+
+.accordion__inner{
+	display: none;
+}

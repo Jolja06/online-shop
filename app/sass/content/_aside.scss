@@ -50,7 +50,7 @@
 }
 .accordion__up{
 	position: absolute;
-	display: none;
+	//display: none;
 	top:19px;
 	right: 12px;
 	@include sprite($arrow-up);
@@ -131,7 +131,6 @@
 	@include sprite($checkbox-active);
 }
 .reset-checkbox{
-	padding: 0 0 0 27px;
 	color: $link;
 }
 .accordion__inner-reset{

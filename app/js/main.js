@@ -162,7 +162,47 @@ var SlideShow = (function () {
 
 })();
 
+var AccordionAside = (function () {
+	function init () {
+		_setUpListners ();
+	}
+
+	function _setUpListners () {
+		$('.accordion__trigger').on('click', _accordion);
+	}
+
+	function _accordion (e) {
+		e.preventDefault();
+
+		_openSection($(this));
+
+		function _openSection ($this) {
+			var container = $this.closest('.accordion__item'),
+				content = container.find('.accordion__inner'),
+				otherContent = $this.closest('.accordion').find('.accordion__inner');
+
+			if(!container.hasClass('active')) {
+				otherContent.slideUp().closest('.accordion__item').removeClass('active');
+				container.addClass('active');
+				content.stop(true, true).slideDown();
+				
+			} else {
+				
+				container.removeClass('active');
+				content.stop(true, true).slideUp();
+			}
+
+
+		}
+
+	}
+	return {
+		init: init
+	}
+})();
+
 SliderWidget.init();
 ChangeView.init();
 ResetChecked.init();
 SlideShow.init();
+AccordionAside.init();
