@@ -70,24 +70,24 @@ var ChangeView = (function () {
 	}
 
 
-	function _changeView ($this) {
+	function _changeView (e) {
+	e.preventDefault();
+	
+		var $this = $(this);
 		
-	var _previouseClass = '';
-		var $this = $(this),
-			item = $this.closest('.view-catalog__item'),
+		var item = $this.closest('.view-catalog__link'),
 			view = item.data('view'),
 			list = $('#goods__list'),
-			viewPrefix = 'goods__list_',
-			classView = viewPrefix + view;
+			modifier = 'goods__list_',
+			viewClass = modifier + view;
 
-			console.log(this);
-
-		if ( _previouseClass = '') {
-			_previouseClass = list.attr('class');
+		if(view == 'table') {
+			list.attr('class', 'goods__list');
+		}else if(view == 'thumbnail') {
+			list.attr('class', 'goods__list' + ' ' +viewClass)
+		}else {
+			list.attr('class', 'goods__list' + ' ' + 'goods__list_thumbnail' + ' ' +viewClass)
 		}
-
-		list.attr('class', _previouseClass + ' ' + classView );
-
 	}
 
 	function _activeView (e) {

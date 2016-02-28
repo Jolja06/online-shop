@@ -160,7 +160,7 @@ html(lang="ru-Ru")
 								|Вид каталога
 							div.view-catalog__wrapper
 								ul.view-catalog__list
-									li.view-catalog__item
+									li.view-catalog__item.active
 										a(href="#" class="view-catalog__link_table" data-view="table").view-catalog__link
 											|table
 									li.view-catalog__item
@@ -171,7 +171,7 @@ html(lang="ru-Ru")
 											|link
 
 					main.catalog
-						ul(id="goods__list").goods__list.goods__list_thumbnail.goods__list_list
+						ul(id="goods__list").goods__list
 							- for (var i = 0; i < 9; i++)
 								li.goods__item
 									div.goods__item-inner
