@@ -65,6 +65,28 @@ var ChangeView = (function () {
 	function _setUpListners () {
 
 		$('.view-catalog__link').on('click', _activeView);
+		$('.view-catalog__link').on('click', _changeView);
+
+	}
+
+
+	function _changeView ($this) {
+		
+	var _previouseClass = '';
+		var $this = $(this),
+			item = $this.closest('.view-catalog__item'),
+			view = item.data('view'),
+			list = $('#goods__list'),
+			viewPrefix = 'goods__list_',
+			classView = viewPrefix + view;
+
+			console.log(this);
+
+		if ( _previouseClass = '') {
+			_previouseClass = list.attr('class');
+		}
+
+		list.attr('class', _previouseClass + ' ' + classView );
 
 	}
 
@@ -76,12 +98,10 @@ var ChangeView = (function () {
 		$this.closest('.view-catalog__item').addClass('active')
 			.siblings().removeClass('active');
 
-
-
 	}
 
 	return {
-		init : init,
+		init : init
 	}
 })();
 
