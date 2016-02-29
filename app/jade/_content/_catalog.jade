@@ -1,50 +1,53 @@
 main.catalog
-	ul(id="goods__list").goods__list
-		- for (var i = 0; i < 9; i++)
-			li.goods__item
-				div.goods__item-inner
-					div.goods__left
-						div.goods__slideshow
-							div.goods__slideshow-block
-								a(href="#").goods__slideshow-display
-									img(src="http://lorempixel.com/200/200/technics/6" alt="").goods__slideshow-img
-								ul.goods__slideshow-thumbs
-									- for (var j = 0; j < 3; j++)
-										li.goods__slideshow-item
-											a(href="#").goods__slideshow-link
-												img(src="http://lorempixel.com/40/40/technics/" + j alt="").goods__slideshow-thumb-img
-							div.goods__article
-								div.goods__article-word 
-									|Артикул
-							-var articul = ['189238', '283135', '345328', '589338', '387228', '359110', '422105', '112234', '187537']
-							each item in articul
-								div.goods__article-art 
-									|#{item}
-						div.goods__desc
-							div.goods__desc-title 
-								|Samsung GT-I9301I GALAXY S 3 
-							ul.goods__desc-options
-								- var options = {'Тип SIM-карты': 'Micro-SIM', 'Количество SIM-карт': '1', 'Цвет':'Белый', 'ОС': 'Android', 'Связь 3G': 'Есть', '4G(LTE)': 'Нет', 'GPS-модуль': 'Есть'}
-								- var index = 0;
-								- for (item in options)
-									li(class="goods__option-item" + ( !(index++ % 2) ? ' goods__option-item_bg' : ''))
-										div.goods__option-key= item
-										div.goods__option-value= options[item]
-							div.goods__rating
-								ul.goods__rating-stars
-									li.goods__rating-stars-item.goods__rating-stars-item_full
-									li.goods__rating-stars-item.goods__rating-stars-item_full
-									li.goods__rating-stars-item.goods__rating-stars-item_full
-									li.goods__rating-stars-item.goods__rating-stars-item_full
-									li.goods__rating-stars-item
-								div.goods__rating-amount 4
-					div.goods__right
-						div.goods__info
-							div.goods__price
-								|11 290
-								i.rub
-						div.goods__info-bottom
-							a(href="#").goods__buy-btn
-								|В корзину
-							div.goods__availability
-								|В наличии
+						ul(id="goods__list").goods__list
+							- for (var i = 0; i < 9; i++)
+								li.goods__item
+									div.goods__item-inner
+										div.goods__left
+											div.goods__slideshow
+												div.goods__slideshow-block
+													a(href="#").goods__slideshow-display
+														img(src="img/goods/samsung.jpg" alt="").goods__slideshow-img
+													ul.goods__slideshow-thumbs
+														li.goods__slideshow-item
+															a(href="#").goods__slideshow-link
+																img(src="img/goods/samsung.jpg" alt="").goods__slideshow-thumb-img
+														li.goods__slideshow-item
+															a(href="#").goods__slideshow-link
+																img(src="img/goods/samsung-face.jpg" alt="").goods__slideshow-thumb-img
+														li.goods__slideshow-item
+															a(href="#").goods__slideshow-link
+																img(src="img/goods/samsung-back.jpg" alt="").goods__slideshow-thumb-img
+												div.goods__article
+													div.goods__article-word 
+														|Артикул
+													div.goods__article-art 
+														|189238
+											div.goods__desc
+												div.goods__desc-title 
+													|Samsung GT-I9301I GALAXY S 3 
+												ul.goods__desc-options
+													- var options = {'Тип SIM-карты': 'Micro-SIM', 'Количество SIM-карт': '1', 'Цвет':'Белый', 'ОС': 'Android', 'Связь 3G': 'Есть', '4G(LTE)': 'Нет', 'GPS-модуль': 'Есть'}
+													- var index = 0;
+													- for (item in options)
+														li(class="goods__option-item" + ( !(index++ % 2) ? ' goods__option-item_bg' : ''))
+															div.goods__option-key= item
+															div.goods__option-value= options[item]
+												div.goods__rating
+													ul.goods__rating-stars
+														li.goods__rating-stars-item.goods__rating-stars-item_full
+														li.goods__rating-stars-item.goods__rating-stars-item_full
+														li.goods__rating-stars-item.goods__rating-stars-item_full
+														li.goods__rating-stars-item.goods__rating-stars-item_full
+														li.goods__rating-stars-item
+													div.goods__rating-amount 4
+										div.goods__right
+											div.goods__info
+												div.goods__price
+													|11 290
+													i.rub
+											div.goods__info-bottom
+												a(href="#").goods__buy-btn
+													|В корзину
+												div.goods__availability
+													|В наличии
