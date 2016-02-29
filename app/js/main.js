@@ -111,13 +111,16 @@ var ResetChecked = (function() {
 	}
 
 	function _setUpListners() {
-		$('.reset-checkbox').on('click' , _reset)
+		$('.reset-checkbox').on('click', _reset);
 	}
 
 	function _reset (e) {
 		e.preventDefault();
 
-		$('.accordion__inner input[type=checkbox]').removeProp('checked');
+		var $this = $(this),
+			list = $this.closest('.accordion__inner');
+
+		list.find('input:checkbox').removeProp('checked');
 	}
 	return {
 		init: init
