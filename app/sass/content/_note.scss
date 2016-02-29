@@ -1,0 +1,26 @@
+.note{
+	margin-top: 7px;
+}
+.note__wrapp{
+	margin-bottom: 30px;
+	margin-top: -27px;
+	p{
+		text-align: justify;
+		text-indent: 37px;
+		font-family: 'OpenSans';
+		font-size: 14px;
+		color: $color;
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+	.split{
+		text-indent: 0 !important;
+	}
+	.first {
+		padding-right: 40px;
+		box-sizing: border-box;
+	}
+	.name__title_bottom{
+		margin-top: 26px;
+	}
+}

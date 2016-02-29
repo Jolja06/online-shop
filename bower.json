@@ -1,9 +1,10 @@
 {
   "name": "online-shop",
   "dependencies": {
-    "jquery": "1.8",
-    "normalize-css": "~3.0.3",
+    "jquery": "1.10.0",
     "jquery-ui": "~1.11.4",
+    "jquery.columnizer": "~1.6.2",
+    "normalize-css": "~3.0.3",
     "select2": "~4.0.1"
   }
 }

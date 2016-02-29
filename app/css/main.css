@@ -3179,5 +3179,27 @@ body {
   font-size: 12px;
   color: #7f7f7f; }
 
+.note {
+  margin-top: 7px; }
+
+.note__wrapp {
+  margin-bottom: 30px;
+  margin-top: -27px; }
+.note__wrapp p {
+  text-align: justify;
+  text-indent: 37px;
+  font-family: 'OpenSans';
+  font-size: 14px;
+  color: #333333;
+  margin-top: 15px;
+  margin-bottom: 15px; }
+.note__wrapp .split {
+  text-indent: 0 !important; }
+.note__wrapp .first {
+  padding-right: 40px;
+  box-sizing: border-box; }
+.note__wrapp .name__title_bottom {
+  margin-top: 26px; }
+
 .accordion__inner {
   display: none; }

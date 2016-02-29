@@ -201,8 +201,32 @@ var AccordionAside = (function () {
 	}
 })();
 
+var NoteColums = (function() {
+
+	function init () {
+		_setUpListners();
+		colum();
+	}
+
+	function _setUpListners () {
+
+	}
+
+	function colum () {
+		$('.note__wrapp').columnize({
+			columns : 2,
+		})
+	}
+
+	return {
+		init: init,
+	}
+
+})();
+
 SliderWidget.init();
 ChangeView.init();
 ResetChecked.init();
 SlideShow.init();
 AccordionAside.init();
+NoteColums.init();
