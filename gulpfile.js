@@ -16,7 +16,7 @@ var paths = {
 		js : 'app/js/**/*.js',
 		css : 'app/css/**/*.css',
 		scss : 'app/sass/**/*.scss',
-		jade : 'app/jade/**/*.jade',
+		jade : 'app/jade/*.jade',
 		img : 'app/img/sprites/*.png'
 	},
 	dest: {

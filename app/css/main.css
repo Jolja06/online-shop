@@ -2973,7 +2973,6 @@ footer {
 
 .goods__list_thumbnail {
   border: none;
-  overflow: hidden;
   border-radius: 0px;
   margin-left: -15px;
   background: transparent;
@@ -2992,7 +2991,6 @@ footer {
   box-sizing: border-box; }
 .goods__list_thumbnail .goods__item:hover {
   box-sizing: border-box;
-  border: 1px solid #dee1e4;
   box-shadow: 0px 1px 7.2px 0.8px rgba(153, 153, 153, 0.75); }
 .goods__list_thumbnail .goods__item-inner {
   padding: 15px 11px; }
@@ -3064,21 +3062,21 @@ footer {
 .goods__list_list {
   border: 1px solid #dee1e4;
   border-radius: 5px;
-  overflow: hidden;
-  margin-left: 0; }
+  margin-left: 0;
+  background: #fff; }
 .goods__list_list .goods__item {
+  box-sizing: border-box;
   display: block;
   width: auto;
   margin-left: 0;
   border-radius: 0;
-  margin-bottom: 0;
+  margin-bottom: 3px;
   border: none;
   border-top: 1px solid #dee1e4; }
 .goods__list_list .goods__item:first-child {
   border-top: none; }
-.goods__list_list .goods__item:first-child:hover {
+.goods__list_list .goods__item:hover {
   box-sizing: border-box;
-  border: 1px solid #dee1e4;
   box-shadow: 0px 1px 7.2px 0.8px rgba(153, 153, 153, 0.75); }
 .goods__list_list .goods__item .goods__left {
   float: left; }
