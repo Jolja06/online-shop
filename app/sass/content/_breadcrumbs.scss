@@ -4,6 +4,17 @@
 }
 .breadcrumbs__item{
 	display: inline-block;
+	&:before{
+		content: ">";
+		display: inline-block;
+		padding: 0 5px;
+	}
+	&:first-child{
+		&:before{
+			content: "";
+			display: none;
+		}
+	}
 }
 .breadcrumbs__link{
 	text-decoration: none;

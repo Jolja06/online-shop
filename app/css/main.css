@@ -2407,6 +2407,13 @@ footer {
 
 .breadcrumbs__item {
   display: inline-block; }
+.breadcrumbs__item:before {
+  content: ">";
+  display: inline-block;
+  padding: 0 5px; }
+.breadcrumbs__item:first-child:before {
+  content: "";
+  display: none; }
 
 .breadcrumbs__link {
   text-decoration: none;
