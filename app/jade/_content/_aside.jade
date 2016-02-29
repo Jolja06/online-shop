@@ -13,8 +13,8 @@ aside.aside
 			li.accordion__item.active
 				a(href="#").accordion__trigger
 					|Наличие в магазинах
-					i(style="display:block").accordion__up
-				ul(style="display:block").accordion__inner
+					i.accordion__up
+				ul.accordion__inner
 					li.accordion__inner-item.accordion__item_check
 						input(id="all" type="radio" name="availability" checked).radio__input
 						label(for="all").radio__label 
@@ -23,7 +23,7 @@ aside.aside
 						input(id="nearest" type="radio" name="availability").radio__input 
 						label(for="nearest").radio__label
 							|В ближайшем ко мне магазине
-			li.accordion__item.accordion__inner-item_check
+			li.accordion__item.accordion__inner-item_check.active
 				a(href="#").accordion__trigger
 					|Бренды
 					i.accordion__up
@@ -32,7 +32,7 @@ aside.aside
 
 				
 
-			li.accordion__item
+			li.accordion__item.active
 				div.price
 					a(href="#").accordion__trigger
 						|Цена
@@ -46,7 +46,7 @@ aside.aside
 						li.accordion__inner-item
 							div(class="price__element" data-min="0" data-max="25000")
 
-			li.accordion__item
+			li.accordion__item.active
 				a(href="#").accordion__trigger
 					|Цвет
 					i.accordion__up
@@ -59,7 +59,7 @@ aside.aside
 								li.color__item
 									a(href="#" class="color__link_#{item}" ).color__link
 										|#{item}
-			li.accordion__item
+			li.accordion__item.active
 				a(href="#").accordion__trigger
 					|Операционная система
 					i.accordion__up

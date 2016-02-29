@@ -50,13 +50,14 @@
 }
 .accordion__up{
 	position: absolute;
-	display: none;
+	display: block;
 	top:19px;
 	right: 12px;
 	@include sprite($arrow-up);
 }
 .accordion__inner{
 	padding: 0 27px;
+	display: block
 }
 .accordion__inner-item{
 	padding-bottom: 19px;
