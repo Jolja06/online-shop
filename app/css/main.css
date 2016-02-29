@@ -2387,7 +2387,8 @@ footer {
   visibility: hidden; }
 
 .nav__item {
-  display: inline-block; }
+  display: inline-block;
+  font-family: 'OpenSans'; }
 
 .nav__link {
   font-size: 16px;
@@ -2761,7 +2762,6 @@ footer {
 .goods__list {
   border: 1px solid #dee1e4;
   border-radius: 5px;
-  overflow: hidden;
   background: #ffffff; }
 
 .goods__item {
@@ -2771,7 +2771,6 @@ footer {
   border-top: none; }
 .goods__item:hover {
   box-sizing: border-box;
-  border: 1px solid #dee1e4;
   box-shadow: 0px 1px 7.2px 0.8px rgba(153, 153, 153, 0.75); }
 
 .goods__item-inner {
