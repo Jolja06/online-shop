@@ -1,0 +1,19 @@
+div.header-search
+					div.section-wrapper
+						div.logo
+							a(href="/").logo__link
+								img(src="img/logo/logo.png" alt="cooltech").logo__img
+								h1.logo__header
+									|COOLTECH
+						div.search
+							form(name="search" method="get").search__form
+								input(type="search" placeholder="Что будем искать").search__input
+								button(type="submit").search__submit
+									|Найти
+						div.basket
+							-var basket = [{name: 'Карта проезда', class: 'map'}, {name: 'История заказов', class: 'history'}, {name: 'Корзина', class: 'bask' }]
+							ul.basket__list
+								each item in basket
+									li.basket__item
+										a(href="#" class="backet__link_#{item.class}").backet__link
+											|#{item.name}

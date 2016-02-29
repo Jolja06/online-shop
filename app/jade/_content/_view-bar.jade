@@ -1,0 +1,25 @@
+div.view-catalog
+	div.sorting
+		label(for="select").sorting__title
+			|Сортировать по
+		div.select__wrapper
+			select(id="select" name="select").sorting__select
+				option
+					|по популярности
+				option(selected)
+					|по цене
+
+	div.view-catalog__icon
+		span.view-catalog__title
+			|Вид каталога
+		div.view-catalog__wrapper
+			ul.view-catalog__list
+				li.view-catalog__item.active
+					a(href="#" class="view-catalog__link_table" data-view="table").view-catalog__link
+						|table
+				li.view-catalog__item
+					a(href="#" class="view-catalog__link_thumbnail" data-view="thumbnail").view-catalog__link
+						|thumbnail
+				li.view-catalog__item
+					a(href="#" class="view-catalog__link_list" data-view="list").view-catalog__link
+						|link

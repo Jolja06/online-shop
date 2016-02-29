@@ -1,274 +1,37 @@
-include _layout/_mixin
 doctype html
 html(lang="ru-Ru")
-	head
-		meta(charset="UTF-8")
-		meta(name="viewport" content="width=1150, initial-scale=1")
-		title COOLTECH
-		// bower:css
-		// endbower
-		link(href="css/main.css" rel="stylesheet")
-
+	include _content/_head
 	body
 		div.wrapper
 			header.header
-				div.header-contact
-					div.section-wrapper
-						div.social
-							-var socials = [{soc:'fb', url:'https://www.facebook.com/', text:'facebook'},{soc:'vk', url:'http://vk.com/', text:'vkontakte'},{soc:'twt', url:'https://twitter.com/', text:'twitter'}];
-							ul.social__list
-								each item in socials
-									li.social__item
-										a(href="#{item.url}" class="social__link_#{item.soc}").social__link
-											|#{item.text}
-						div.address
-							i.address__icon
-							span.address__name.
-								ул. Маяковская 6, офис 17
-						div.contact
-							i.contact__icon
-							span.contact__phone.
-								+7 (921) 123-12-13
-				div.header-search
-					div.section-wrapper
-						div.logo
-							a(href="/").logo__link
-								img(src="img/logo/logo.png" alt="cooltech").logo__img
-								h1.logo__header
-									|COOLTECH
-						div.search
-							form(name="search" method="get").search__form
-								input(type="search" placeholder="Что будем искать").search__input
-								button(type="submit").search__submit
-									|Найти
-						div.basket
-							-var basket = [{name: 'Карта проезда', class: 'map'}, {name: 'История заказов', class: 'history'}, {name: 'Корзина', class: 'bask' }]
-							ul.basket__list
-								each item in basket
-									li.basket__item
-										a(href="#" class="backet__link_#{item.class}").backet__link
-											|#{item.name}
+				include _content/_header
+				include _content/_header-search
 			nav.nav
-				div.section-wrapper
-					-var nav = [{name:'Планшеты', link:'#', active:''}, {name:'Мобильные телефоны', link:'#', active: '_active'}, {name:'Mp3 плееры', link:'#', active:''}, {name:'Персональные компьютеры', link:'#', active:''}, {name:'Ноутбуки', link:'#', active:''}, {name:'Аксессуары', link:'#', active:''}, {name:'Бытовая техника', link:'#', active:''}]
-						
-					ul.nav__list
-						each item in nav
-							li.nav__item
-								a(href="#{item.link}" class="#{item.active == '_active' ? 'nav__link_active' : ''}").nav__link
-									|#{item.name} 
+				include _content/_nav
 
 			div.breadcrumbs
-				div.section-wrapper
-					-var breadcrumbs = [{name: 'Главная', link: '#'}, {name: 'Каталог', link: '#', active: '_active'}]
-					ul.breadcrumbs__list
-						each item in breadcrumbs
-							li.breadcrumbs__item
-								a(href="#{item.link}" class="#{item.active == '_active' ? 'breadcrumbs__link_active' : ''}").breadcrumbs__link
-									|#{item.name} 
+				include _content/_breadcrumbs
+				
 			div.nav-name
-				div.section-wrapper
-					h2.name__title
-						|Мобильные телефоны
+				include _content/_nav-name
 						
 			div.section-wrapper
-				aside.aside
-					div.category
-						-var category = [{name:'Флагманы', active:'', class: 'flagship'},{name: 'Бюджетная линейка', active: '_active', class: 'budget'}]
-						ul.category__list
-							each item in category
-								li.category__item
-									a(href="#" class="#{item.active == '_active' ? 'category__link_active' : ''}").category__link
-										|#{item.name}
-
-					div.accordion
-						ul.accordion__list
-							li.accordion__item.active
-								a(href="#").accordion__trigger
-									|Наличие в магазинах
-									i(style="display:block").accordion__up
-								ul(style="display:block").accordion__inner
-									li.accordion__inner-item.accordion__item_check
-										input(id="all" type="radio" name="availability" checked).radio__input
-										label(for="all").radio__label 
-											|Во всех магазинах
-									li.accordion__inner-item.accordion__item_check
-										input(id="nearest" type="radio" name="availability").radio__input 
-										label(for="nearest").radio__label
-											|В ближайшем ко мне магазине
-							li.accordion__item.accordion__inner-item_check
-								a(href="#").accordion__trigger
-									|Бренды
-									i.accordion__up
-
-								+checkbox('accordion__inner', ['lenovo', 'apple', 'samsung', 'asus', 'motorola'])
-
-								
-
-							li.accordion__item
-								div.price
-									a(href="#").accordion__trigger
-										|Цена
-										i.accordion__up
-									ul.accordion__inner.price__list
-										li.accordion__inner-item
-											span.price__text от
-											input(type="text" ).price__input.price__input_from.price-left
-											span.price__text до
-											input(type="text" ).price__input.price__input_to.price-right
-										li.accordion__inner-item
-											div(class="price__element" data-min="0" data-max="25000")
-
-							li.accordion__item
-								a(href="#").accordion__trigger
-									|Цвет
-									i.accordion__up
-								ul.accordion__inner
-									li.accordion__inner-item
-										-var color = ['white', 'grey', 'black', 'darkblue', 'red', 'yellow', 'orange', 'green', 'blue', 'purple', 'pink', 'brown']
-										
-										ul.color__list
-											each item in color
-												li.color__item
-													a(href="#" class="color__link_#{item}" ).color__link
-														|#{item}
-							li.accordion__item
-								a(href="#").accordion__trigger
-									|Операционная система
-									i.accordion__up
-								+checkbox('accordion__inner', ['android', 'iOs', 'windows mobile', 'symbian', 'custom'])
+				include _content/_aside
 							
 
 				div.content
-					div.view-catalog
-						div.sorting
-							label(for="select").sorting__title
-								|Сортировать по
-							div.select__wrapper
-								select(id="select" name="select").sorting__select
-									option
-										|по популярности
-									option(selected)
-										|по цене
+					
 
-						div.view-catalog__icon
-							span.view-catalog__title
-								|Вид каталога
-							div.view-catalog__wrapper
-								ul.view-catalog__list
-									li.view-catalog__item.active
-										a(href="#" class="view-catalog__link_table" data-view="table").view-catalog__link
-											|table
-									li.view-catalog__item
-										a(href="#" class="view-catalog__link_thumbnail" data-view="thumbnail").view-catalog__link
-											|thumbnail
-									li.view-catalog__item
-										a(href="#" class="view-catalog__link_list" data-view="list").view-catalog__link
-											|link
-
-					main.catalog
-						ul(id="goods__list").goods__list
-							- for (var i = 0; i < 9; i++)
-								li.goods__item
-									div.goods__item-inner
-										div.goods__left
-											div.goods__slideshow
-												div.goods__slideshow-block
-													a(href="#").goods__slideshow-display
-														img(src="http://lorempixel.com/200/200/technics/6" alt="").goods__slideshow-img
-													ul.goods__slideshow-thumbs
-														- for (var j = 0; j < 3; j++)
-															li.goods__slideshow-item
-																a(href="#").goods__slideshow-link
-																	img(src="http://lorempixel.com/40/40/technics/" + j alt="").goods__slideshow-thumb-img
-												div.goods__article
-													div.goods__article-word 
-														|Артикул
-													div.goods__article-art 
-														|189238
-											div.goods__desc
-												div.goods__desc-title 
-													|Samsung GT-I9301I GALAXY S 3 
-												ul.goods__desc-options
-													- var options = {'Тип SIM-карты': 'Micro-SIM', 'Количество SIM-карт': '1', 'Цвет':'Белый', 'ОС': 'Android', 'Связь 3G': 'Есть', '4G(LTE)': 'Нет', 'GPS-модуль': 'Есть'}
-													- var index = 0;
-													- for (item in options)
-														li(class="goods__option-item" + ( !(index++ % 2) ? ' goods__option-item_bg' : ''))
-															div.goods__option-key= item
-															div.goods__option-value= options[item]
-												div.goods__rating
-													ul.goods__rating-stars
-														li.goods__rating-stars-item.goods__rating-stars-item_full
-														li.goods__rating-stars-item.goods__rating-stars-item_full
-														li.goods__rating-stars-item.goods__rating-stars-item_full
-														li.goods__rating-stars-item.goods__rating-stars-item_full
-														li.goods__rating-stars-item
-													div.goods__rating-amount 4
-										div.goods__right
-											div.goods__info
-												div.goods__price
-													|11 290
-													i.rub
-											div.goods__info-bottom
-												a(href="#").goods__buy-btn
-													|В корзину
-												div.goods__availability
-													|В наличии
-						div.pagination
-							ul.pagination__list
-								li.pagination__item.pagination__item__prev
-									a(href="#").pagination__link
-										div.pagination__mark
-								- for (var i = 1; i < 4; i++)
-									li.pagination__item
-										a(href="#").pagination__link
-											div.pagination__mark= i
-								li.pagination__item.pagination__item__next
-									a(href="#").pagination__link
-										div.pagination__mark
+					include _content/_catalog
+						include _content/_pagination
+						
 			div.note
-				div.section-wrapper
-					h2.name__title.name__title_bottom
-						|Важная информация
-					div.note__wrapp
-						p.
-							Идейные соображения высшего порядка, а также укрепление и развитие структуры позволяет оценить значение направлений прогрессивного развития. С другой стороны постоянный количественный рост и сфера нашей активности способствует подготовки и реализации соответствующий условий активизации.
-						p.
-							Повседневная практика показывает, что дальнейшее развитие различных форм деятельности требуют от нас анализа систем массового участия. Значимость этих проблем настолько очевидна, что постоянный количественный рост и сфера нашей активности требуют определения и уточнения системы обучения кадров, соответствует насущным потребностям.
-
-						p.
-							Не следует, однако забывать, что сложившаяся структура организации способствует подготовки и реализации новых предложений. Значимость этих проблем настолько очевидна, что сложившаяся структура организации позволяет оценить значение новых предложений.
-
-						p.
-							Идейные соображения высшего порядка, а также рамки и место обучения кадров позволяет оценить значение направлений прогрессивного развития. Не следует, однако забывать, что укрепление и развитие структуры представляет собой интересный эксперимент проверки соответствующий условий активизации. Не следует, однако забывать, что дальнейшее развитие различных форм деятельности играет важную роль в формировании форм развития. Задача организации, в особенности же дальнейшее развитие различных форм деятельности позволяет выполнять важные задания по разработке новых предложений. Не следует, однако забывать, что рамки и место обучения кадров влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Разнообразный и богатый опыт постоянный количественный рост и сфера нашей активности обеспечивает широкому кругу (специалистов) участие в формировании новых предложений.
-
-						p.
-							Разнообразный и богатый опыт начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке систем массового участия. Повседневная практика показывает, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании соответствующий условий активизации. Задача организации, в особенности же постоянный количественный рост и сфера нашей активности влечет за собой процесс внедрения и модернизации соответствующий условий активизации. Повседневная практика показывает, что реализация намеченных плановых заданий позволяет выполнять важные задания по разработке системы обучения кадров, соответствует насущным потребностям.
+				include _content/_note
 			
 
 
 		footer.footer
-			div.section-wrapper.section-wrapper_footer
-				div.logo-footer
-					a(href="/").logo__link.logo-footer__link
-						img(src="img/logo/logo-footer.png" alt="cooltech").logo__img
-				div.footer-wrap
-					div.footer-social
-						-var socials = [{soc:'fb-footer', url:'https://www.facebook.com/', text:'facebook'},{soc:'vk-footer', url:'http://vk.com/', text:'vkontakte'},{soc:'twt-footer', url:'https://twitter.com/', text:'twitter'}];
-							ul.social__list.social__list_footer
-								each item in socials
-									li.social__item.social__item_footer
-										a(href="#{item.url}" class="social__link_#{item.soc}").social__link.social__link_footer
-											|#{item.text}
-					div.footer-nav
-						ul.footer-nav__list
-							each item in nav
-								li.footer-nav__item
-									a(href="#{item.link}" class="#{item.active == '_active' ? 'footer-nav__link_active' : '' }").footer-nav__link
-										|#{item.name}
-			div.section-wrapper_footer-copy 
-				div.footer-copy
-					|All rights reserved. 2015. no copy alowed
+			include _content/_footer
 
 
 		// bower:js

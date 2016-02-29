@@ -1,0 +1,8 @@
+div.section-wrapper
+	-var nav = [{name:'Планшеты', link:'#', active:''}, {name:'Мобильные телефоны', link:'#', active: '_active'}, {name:'Mp3 плееры', link:'#', active:''}, {name:'Персональные компьютеры', link:'#', active:''}, {name:'Ноутбуки', link:'#', active:''}, {name:'Аксессуары', link:'#', active:''}, {name:'Бытовая техника', link:'#', active:''}]
+		
+	ul.nav__list
+		each item in nav
+			li.nav__item
+				a(href="#{item.link}" class="#{item.active == '_active' ? 'nav__link_active' : ''}").nav__link
+					|#{item.name} 

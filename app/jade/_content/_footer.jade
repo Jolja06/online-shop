@@ -1,0 +1,21 @@
+div.section-wrapper.section-wrapper_footer
+	div.logo-footer
+		a(href="/").logo__link.logo-footer__link
+			img(src="img/logo/logo-footer.png" alt="cooltech").logo__img
+	div.footer-wrap
+		div.footer-social
+			-var socials = [{soc:'fb-footer', url:'https://www.facebook.com/', text:'facebook'},{soc:'vk-footer', url:'http://vk.com/', text:'vkontakte'},{soc:'twt-footer', url:'https://twitter.com/', text:'twitter'}];
+				ul.social__list.social__list_footer
+					each item in socials
+						li.social__item.social__item_footer
+							a(href="#{item.url}" class="social__link_#{item.soc}").social__link.social__link_footer
+								|#{item.text}
+		div.footer-nav
+			ul.footer-nav__list
+				each item in nav
+					li.footer-nav__item
+						a(href="#{item.link}" class="#{item.active == '_active' ? 'footer-nav__link_active' : '' }").footer-nav__link
+							|#{item.name}
+div.section-wrapper_footer-copy 
+	div.footer-copy
+		|All rights reserved. 2015. no copy alowed
