@@ -2474,6 +2474,7 @@ footer {
 
 .accordion__up {
   position: absolute;
+  display: none;
   top: 19px;
   right: 12px;
   background-image: url(../img/sprite/sprite.png);

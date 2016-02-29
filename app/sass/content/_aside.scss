@@ -50,7 +50,7 @@
 }
 .accordion__up{
 	position: absolute;
-	//display: none;
+	display: none;
 	top:19px;
 	right: 12px;
 	@include sprite($arrow-up);

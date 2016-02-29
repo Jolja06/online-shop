@@ -179,17 +179,19 @@ var AccordionAside = (function () {
 		function _openSection ($this) {
 			var container = $this.closest('.accordion__item'),
 				content = container.find('.accordion__inner'),
-				otherContent = $this.closest('.accordion').find('.accordion__inner');
+				otherContent = $this.closest('.accordion').find('.accordion__inner'),
+				iconUp = container.find('.accordion__up');
 
 			if(!container.hasClass('active')) {
-				otherContent.slideUp().closest('.accordion__item').removeClass('active');
-				container.addClass('active');
+				otherContent.slideUp().closest('.accordion__item').removeClass('active').find('.accordion__up').hide();
+				container.addClass('active').find('.accordion__up').show();
 				content.stop(true, true).slideDown();
 				
 			} else {
 				
 				container.removeClass('active');
 				content.stop(true, true).slideUp();
+				iconUp.hide();
 			}
 
 
