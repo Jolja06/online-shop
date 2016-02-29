@@ -1,0 +1,73 @@
+.footer{
+	color: $fontActive;
+}
+.section-wrapper_footer{
+	position: relative;
+}
+.logo-footer{
+	float: left;
+	margin-top: 70px;
+}
+.footer-wrap{
+	float: right;
+}
+.footer-social{
+	text-align: right;
+	margin-top: 35px;
+}
+.social__item_footer{
+	margin-left: 23px;
+	&:first-child{
+		margin-left: 0;
+	}
+}
+.footer-nav{
+	margin-top: 25px;
+}
+.footer-nav__list{
+	max-width: 565px;
+	text-align: right;
+}
+.footer-nav__item{
+	display: inline-block;
+	margin-left: 25px;
+	margin-bottom: 18px;
+
+}
+.social__link_fb-footer{
+	@include sprite($fb-footer);
+	&:hover{
+		@include sprite($fb-footer-hover);
+	}
+}
+.social__link_vk-footer{
+	@include sprite($vk-footer);
+	&:hover{
+		@include sprite($vk-footer-hover);
+	}
+}
+.social__link_twt-footer{
+	@include sprite($twt-footer);
+	&:hover{
+		@include sprite($twt-footer-hover);
+	}
+}
+.footer-nav__link{
+	color: $fontActive;
+	text-decoration: underline;
+	&:hover{
+		text-decoration: none;
+	}
+}
+.section-wrapper_footer-copy {
+	border-top: 1px solid #494949;
+	margin-top: 10px;
+
+}
+.footer-copy{
+	font-family: 'OpenSans';
+	font-size: 12px;
+	text-align: center;
+	padding: 5px 0;
+	
+}
